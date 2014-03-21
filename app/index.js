@@ -3,6 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
+var shell = require('shelljs');
 
 
 var MongodbGenerator = yeoman.generators.Base.extend({
@@ -38,6 +39,12 @@ var MongodbGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
+    shell.echo("CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+    shell.exec('virtualenv --no-site-packages .', function (code, output) {
+      shell.exec('./bin/python bootstrap.py', function (code, output) {
+        shell.exec('./bin/buildout', {async: true});
+      });
+    });
     this.mkdir('app');
     this.mkdir('app/templates');
 
@@ -48,6 +55,8 @@ var MongodbGenerator = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
+    this.copy('bootstrap.py', 'bootstrap.py');
+    this.copy('buildout.cfg', 'buildout.cfg');
   }
 });
 
