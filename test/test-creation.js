@@ -25,7 +25,7 @@ describe('mongodb generator', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'mongodbVersion': '2.4.9'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {

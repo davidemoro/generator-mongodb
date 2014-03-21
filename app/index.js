@@ -26,14 +26,12 @@ var MongodbGenerator = yeoman.generators.Base.extend({
     this.log(chalk.magenta('You\'re using the fantastic Mongodb generator.'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'mongodbVersion',
+      message: 'Choose the mongodb version (eg: 2.4.9)'
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.mongodbVersion = props.mongodbVersion;
 
       done();
     }.bind(this));
