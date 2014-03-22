@@ -39,10 +39,12 @@ var MongodbGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
+    var done = this.async();
     shell.echo("CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
     shell.exec('virtualenv --no-site-packages .', {async: true}, function (code, output) {
       shell.exec('./bin/python bootstrap.py', {async: true}, function (code, output) {
         shell.exec('./bin/buildout', {async: true});
+        done();
       });
     });
     this.mkdir('app');
