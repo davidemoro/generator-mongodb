@@ -45,7 +45,7 @@ var MongodbGenerator = yeoman.generators.Base.extend({
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
     this.copy('bootstrap.py', 'bootstrap.py');
-    this.template('buildout.cfg', 'buildout.cfg');
+    this.template('_buildout.cfg', 'buildout.cfg');
   },
 
   projectfiles: function () {
