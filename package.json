@@ -23,7 +23,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
+    "yeoman-generator": "~0.17.0-pre.1",
     "chalk": "~0.4.0",
     "shelljs": "~0.2.6",
     "async": "~0.2.10"
