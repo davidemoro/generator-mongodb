@@ -2,6 +2,8 @@
 
 > [Yeoman](http://yeoman.io) generator
 
+> [Yeoman generator-mongodb](http://davidemoro.blogspot.com/2014/04/yeoman-generator-mongodb-installer.html) interactive installer blog post
+
 
 ## Getting Started
 
