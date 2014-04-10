@@ -2,7 +2,12 @@
 
 > [Yeoman](http://yeoman.io) generator
 
-> See the install instructions on [Yeoman generator-mongodb interactive installer](http://davidemoro.blogspot.com/2014/04/yeoman-generator-mongodb-installer.html) blog post
+
+This is a weekend/night hack just to dive into yeoman: an interactive installer for MongoDB. This code is not battle tested, it won't be maintained by me and it requires much love supporting additional install info (pinning of versions, support more install options, etc).
+
+It is internally based on the buildout system. I'm not suggesting to adopt buildout in js development, I've just used it because it already exists a ready to be used plenty-of-options buildout recipe for installing MongoDB. So that seemed for me the quickest and easier way to reach this goal.
+
+See more information and the install instructions on [Yeoman generator-mongodb interactive installer](http://davidemoro.blogspot.com/2014/04/yeoman-generator-mongodb-installer.html) blog post.
 
 
 ## Getting Started
